@@ -39,18 +39,24 @@ module.exports = {
 				// 被远程引用的时候可以暴露的资源路径以及别名
 				// 必须是相对路径
 				'./NewsList': './src/NewsList',
+				'./Banner': './src/Banner',
+			},
+			remotes: {
+				host: 'host@http://localhost:8000/hostEntry.js',
 			},
 			shared: {
-				react: {
-					// 		singleton: true,
-					// 		requiredVersion: '18.3.1', // React的版本
-					eager: true,
-				},
-				'react-dom': {
-					// 		singleton: true,
-					// 		requiredVersion: '18.3.1',
-					eager: true,
-				},
+				react: '^18.3.1',
+				// {
+				// 	singleton: true, // 单例
+				// 	// 		requiredVersion: '18.3.1', // React的版本
+				// 	eager: true,
+				// },
+				'react-dom': '^18.3.1',
+				// {
+				// 	singleton: true, // 单例
+				// 	// 		requiredVersion: '18.3.1',
+				// 	eager: true,
+				// },
 			},
 		}),
 	],

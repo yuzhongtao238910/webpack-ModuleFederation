@@ -11,7 +11,7 @@ module.exports = {
 		// publicPath: 'http://localhost:8000',
 	},
 	devServer: {
-		port: 8000,
+		port: 8001,
 	},
 	module: {
 		rules: [
@@ -39,12 +39,13 @@ module.exports = {
 			// 远程引用的应用的名字以及别名的映射，使用的时候使用key的值作为映射
 			remotes: {
 				app1: 'remote@http://localhost:3000/remoteEntry.js',
+				app2: 'host@http://localhost:8000/hostEntry.js',
 			},
-			exposes: {
-				'./Host': './src/Host',
-			},
-			filename: 'hostEntry.js',
-			name: 'host',
+			// exposes: {
+			// 	'./Host': './src/Host',
+			// },
+			// filename: 'all.js',
+			// name: 'all',
 			shared: {
 				react: '^18.3.1',
 				// {
